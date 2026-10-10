@@ -1,0 +1,37 @@
+name: Bug report
+description: Something behaves differently from NeoMutt, or breaks.
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Mutt Desktop version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and Mac model
+      placeholder: "macOS 14.6, Intel MacBook Pro 2019"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The keys you pressed, in order.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+      description: Include what NeoMutt does, if you know.
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Relevant muttrc lines
+      description: Remove passwords, tokens, and addresses first.
+      render: muttrc
